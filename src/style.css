@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; 
+  color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #f1c40f;
+  text-decoration: underline;
+}
+
+.fondo-dragonball {
+  background-image: url('./fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 2000px rgba(18, 18, 18, 0.75);
+  width: 100%;
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+.fondo-dragonball > h1, p {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2.5rem;
+  color: #f39c12;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  padding: 30px 20px;
+}
+
+.fondo-dragonball > h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #ecf0f1;
+  font-weight: normal;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  padding: 0 20px;
+}
+
+#contenedor-personajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card {
+  background: rgba(30, 30, 30, 0.9); /* Fondo semi-transparente para ver el parallax */
+  border: 2px solid #e67e22;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(230, 126, 34, 0.5);
+}
+
+.card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #f1c40f;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #dcdde1;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.card hr {
+  border: 0;
+  height: 1px;
+  background: #555;
+  margin-top: 12px;
+}
+
+.buscador-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+#input-buscar {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  background: rgba(30, 30, 30, 0.85);
+  border: 2px solid #e67e22; 
+  border-radius: 30px;
+  color: #ffffff;
+  outline: none;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#input-buscar::placeholder {
+  color: #b2bec3;
+}
+
+#input-buscar:focus {
+  border-color: #f1c40f;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.5);
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #b2bec3;
+  padding: 25px 40px;
+  border-top: 3px solid #e67e22;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+footer li {
+  background: rgba(230, 126, 34, 0.1);
+  padding: 6px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(230, 126, 34, 0.3);
+}

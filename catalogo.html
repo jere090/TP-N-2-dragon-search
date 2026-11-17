@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Dragon Search</title>
+  </head>
+<header>
+      <h1>Buscador de Drgon Ball</h1>
+      <nav>
+        <a href="./index.html">Principal</a>
+        <a href="./catalogo.html">Catalogo</a>
+      </nav>
+    </header>
+
+    <main class="fondo-dragonball">
+      <h1>Encuentra a tu personaje favorito de Dragon Ball</h1>
+      <div class="buscador-container">
+         <input type="text" id="input-buscar" placeholder="Buscar personaje por nombre..." />
+      </div>
+      <p id="Cargando">Cargando personaje...</p>
+      <p id="error" hidden>Ocurrio un error, no se puedo cargar los datos</p>
+      <p id="vacio" hidden>No se encontro al personaje</p>
+
+      <div id="contenedor-personajes"></div>
+    </main>
+
+<body>
+    <script type="module" src="/src/catalogo.js"></script>
+  </body>
+</body>
+</html>
