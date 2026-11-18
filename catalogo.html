@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/src/style.css" />
     <title>Dragon Search</title>
   </head>
-<header>
+<body>
+    <header>
       <h1>Buscador de Drgon Ball</h1>
       <nav>
         <a href="./index.html">Principal</a>
@@ -20,15 +21,20 @@
       <div class="buscador-container">
          <input type="text" id="input-buscar" placeholder="Buscar personaje por nombre..." />
       </div>
-      <p id="Cargando">Cargando personaje...</p>
-      <p id="error" hidden>Ocurrio un error, no se puedo cargar los datos</p>
-      <p id="vacio" hidden>No se encontro al personaje</p>
+      <p id="estado">Cargando personaje...</p>
 
       <div id="contenedor-personajes"></div>
     </main>
 
-<body>
+    <footer>
+      <ul>
+        <li>TPº2 de programación</li>
+        <li>2026</li>
+        <li><a href="https://web.dragonball-api.com/">Api de Dragon Ball</a></li>
+      </ul>
+    </footer>
+
+
     <script type="module" src="/src/catalogo.js"></script>
   </body>
-</body>
 </html>
