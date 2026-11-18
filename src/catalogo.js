@@ -1,4 +1,4 @@
-const url = "https://dragonball-api.com/api/characters";
+const url = "https://dragonball-api.com/api/characters?limit=58";
 
 const $contenedor = document.querySelector("#contenedor-personajes");
 const $estado = document.querySelector("#estado");
@@ -15,8 +15,7 @@ async function cargarPersonaje() {
         if(!res.ok) throw new Error(`Error ${res.status} en la respuesta`);
         
         const datos = await res.json(); 
-        personajes = datos.items;
-        console.log(personajes);
+        personajes = datos.items;  
         
         MostrarPersonajes(personajes);
 
@@ -48,7 +47,7 @@ function MostrarPersonajes(lista) {
         titulo.textContent = Personaje.name;
 
         const detalle = document.createElement("p");
-        detalle.textContent = `${Personaje.ki} · ${Personaje.maxKi} · ${Personaje.race} ${Personaje.originPlanet ? Personaje.originPlanet.name : " · Desconocido"}`;
+        detalle.textContent = `KiBase: ${Personaje.ki} · MaxKi: ${Personaje.maxKi} · Raza: ${Personaje.race} · Afilacion: ${Personaje.affiliation}`;
 
         tarjeta.append(imagen, titulo, detalle);
         $contenedor.appendChild(tarjeta);

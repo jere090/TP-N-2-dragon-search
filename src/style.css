@@ -258,3 +258,68 @@ footer li {
   border-radius: 20px;
   border: 1px solid rgba(230, 126, 34, 0.3);
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+
+  .fondo-dragonball > h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .fondo-dragonball > p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .fondo-dragonball > h2 {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  #contenedor-personajes {
+    padding: 15px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+  }
+
+  .tarjeta {
+    padding: 15px;
+  }
+
+  .tarjeta img {
+    width: 90px;
+    height: 90px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer li {
+    width: 100%;
+    text-align: center;
+  }
+}
